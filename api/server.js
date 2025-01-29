@@ -17,10 +17,6 @@ app.get('/', (request, response) => {
   response.send('Check these spots out');
 });
 
-app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
-});
-
 app.locals.cliffs = [
   {
     id: 1,
@@ -349,3 +345,7 @@ app.post('/api/v1/cliffs', (request, response) => {
 
   response.status(201).json({ id, name, type, maxHeight, depth, latLong, photo });
 });
+
+module.exports = (req, res) => {
+  app(req, res);
+};
