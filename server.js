@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 var cors = require('cors');
 const app = express();
 
@@ -10,8 +9,6 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.use('/photos', express.static(path.join(__dirname, 'public/photos')));
 
 app.set('port', process.env.PORT || 8080);
 app.locals.title = 'Best Cliff Jumping Spots In America';
@@ -349,6 +346,8 @@ app.post('/api/v1/cliffs', (request, response) => {
   response.status(201).json({ id, name, type, maxHeight, depth, latLong, photo });
 });
 
-module.exports = (req, res) => {
-  app(req, res);
-};
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
