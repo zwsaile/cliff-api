@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 var cors = require('cors');
 const app = express();
 
@@ -10,8 +9,6 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-app.use('/photos', express.static(path.join(__dirname, 'photos')));
 
 app.set('port', process.env.PORT || 8080);
 app.locals.title = 'Best Cliff Jumping Spots In America';
