@@ -10,6 +10,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 app.set('port', process.env.PORT || 8080);
 app.locals.title = 'Best Cliff Jumping Spots In America';
 
