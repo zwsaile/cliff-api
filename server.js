@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/photos', express.static(path.join(__dirname, 'photos')));
+app.use('/photos', express.static(path.join(__dirname, 'public/photos')));
 
 app.set('port', process.env.PORT || 8080);
 app.locals.title = 'Best Cliff Jumping Spots In America';
