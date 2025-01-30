@@ -6,13 +6,16 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-  origin: '*', // Allow your frontend origin
+  origin: 'https://cliff-jumps.vercel.app', // Allow requests only from this frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type, Authorization',
   credentials: true
 };
 
 app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
