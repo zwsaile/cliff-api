@@ -1,26 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 var cors = require('cors');
 const app = express();
 
 app.use(express.json());
 
-const corsOptions = {
-  origin: 'https://cliff-jumps.vercel.app', // Allow requests only from this frontend
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type, Authorization',
-  credentials: true
-};
-
-app.use(cors(corsOptions));
-
-// Handle preflight requests
-app.options('*', cors(corsOptions));
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static('public/photos'));
+app.use('/photos', express.static(path.join(__dirname, 'photos')));
 
 app.set('port', process.env.PORT || 8080);
 app.locals.title = 'Best Cliff Jumping Spots In America';
