@@ -1,18 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-var cors = require('cors');
+const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 
 const corsOptions = {
-  origin: '*',
+  origin: 'https://cliff-jumps.vercel.app', // Restrict to your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+  credentials: true, // If using cookies or auth
 };
-app.options('*', cors(corsOptions));
-app.use(cors(corsOptions));
+
+app.use(cors(corsOptions)); // CORS should be applied before routes
+app.options('*', cors(corsOptions)); // Handle preflight requests globally
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
