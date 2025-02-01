@@ -11,7 +11,7 @@ const corsOptions = {
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
 };
-
+app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -355,6 +355,4 @@ app.post('/api/v1/cliffs', (request, response) => {
   response.status(201).json({ id, name, type, maxHeight, depth, latLong, photo });
 });
 
-module.exports = (req, res) => {
-  app(req, res);
-};
+module.exports = app;
