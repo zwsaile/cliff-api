@@ -56,7 +56,7 @@ app.locals.cliffs = [
     depth: 40,
     latLong: [39.871, -106.278],
     location: "Colorado",
-    photo: "/public/photos/green-mountain-co.jpg"
+    photo: "https://swiftmedia.s3.amazonaws.com/mountain.swiftcom.com/images/sites/2/2017/08/22165720/CliffClosure-SDN-080817-1-4.jpg"
   },
   {
     id: 5,
@@ -116,7 +116,7 @@ app.locals.cliffs = [
     depth: 50,
     latLong: [39.960, -106.540],
     location: "California",
-    photo: "https://thumbor.thedailymeal.com/tuhErVkj8RfQC2nNy1COEDhoQfg=//https://www.theactivetimes.com/sites/default/files/uploads/2/2%20Tar%20creek%20falls-youtube%20(2).jpg"
+    photo: "https://steemitimages.com/1280x0/https://cdn.steemitimages.com/DQmaUv36srsvvjY9de2KPx2ykCjFDiGhwk75vLTaM2ifxN5/10403024_788730571158083_4015703319470490810_n.jpg"
   },
   {
     id: 11,
@@ -126,7 +126,7 @@ app.locals.cliffs = [
     depth: 80,
     latLong: [48.389, -114.556],
     location: "Montana",
-    photo: "https://thedyrt.imgix.net/photo/40720/photo/montana-tally-lake-campground_9df01f7e73fa58cb76a1f3109c0460b9.jpg"
+    photo: "https://i.ytimg.com/vi/Vi5C_b-pkLg/sddefault.jpg"
   },
   {
     id: 12,
@@ -226,7 +226,7 @@ app.locals.cliffs = [
     depth: 20,
     latLong: [36.157, -86.617],
     location: "Tennessee",
-    photo: "https://res.cloudinary.com/rayka/image/upload/dfxakipipszg99d2oskc"
+    photo: "https://i.pinimg.com/736x/7c/04/69/7c04694916e38a8ebad275a8ef63d0c5.jpg"
   },
   {
     id: 22,
