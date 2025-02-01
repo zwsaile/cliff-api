@@ -56,7 +56,7 @@ app.locals.cliffs = [
     depth: 40,
     latLong: [39.871, -106.278],
     location: "Colorado",
-    photo: "https://www.visitgrandcounty.com/resources/media/user/1561656244-14743074735_eb90ddb2cd_o_(1)_desktop.jpg"
+    photo: "/public/photos/green-mountain-co.jpg"
   },
   {
     id: 5,
